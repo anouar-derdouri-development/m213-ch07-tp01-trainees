@@ -3,6 +3,7 @@ package com.anouarderdouri.m213_ch07_tp01;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -58,6 +59,13 @@ public class Ex01Activity extends AppCompatActivity {
             ArrayList<String> checkedlanguages = new ArrayList<>();
 
             builder.setTitle("Your preferred languages");
+            builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+
+                }
+            });
+            builder.setCancelable(false);
 
             for (CheckBox cb : checkBoxes) {
                 if(cb.isChecked())
