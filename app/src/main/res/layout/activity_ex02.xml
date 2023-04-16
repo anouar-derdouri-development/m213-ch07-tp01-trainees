@@ -43,8 +43,8 @@
             android:layout_marginStart="32dp"
             android:layout_marginEnd="32dp">
 
-            <TextView
-                android:id="@+id/tvMarried"
+            <CheckBox
+                android:id="@+id/cbMarried"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:text="@string/married"
@@ -64,7 +64,7 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/tvChildOrChildren"
                 app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toEndOf="@+id/tvMarried"
+                app:layout_constraintStart_toEndOf="@+id/cbMarried"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView

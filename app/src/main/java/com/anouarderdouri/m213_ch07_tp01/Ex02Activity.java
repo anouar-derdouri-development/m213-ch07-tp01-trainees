@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.RadioButton;
@@ -20,6 +21,7 @@ import java.util.ArrayList;
 public class Ex02Activity extends AppCompatActivity {
     RadioButton rdPermanent, rdTemporary;
     ConstraintLayout cLayPermanent, cLayTemporary;
+    CheckBox cbMarried;
     Spinner spinnerNumberOfChildren;
     TextView tvChildOrChildren;
     EditText etNumberOfHours;
@@ -37,6 +39,7 @@ public class Ex02Activity extends AppCompatActivity {
         rdTemporary = findViewById(R.id.rdTemporary);
         cLayPermanent = findViewById(R.id.cLayPermanent);
         cLayTemporary = findViewById(R.id.cLayTemporary);
+        cbMarried = findViewById(R.id.cbMarried);
         spinnerNumberOfChildren = findViewById(R.id.spinnerNumberOfChildren);
         tvChildOrChildren = findViewById(R.id.tvChildOrChildren);
         etNumberOfHours = findViewById(R.id.etNumberOfHours);
@@ -92,12 +95,31 @@ public class Ex02Activity extends AppCompatActivity {
 
         //endregion
 
+        //region Married
+
+        cbMarried.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                spinnerNumberOfChildren.setEnabled(isChecked);
+            }
+        });
+
+        cbMarried.performClick();
+        cbMarried.performClick();
+
+        //endregion
+
+        //region Calculate salary
+
         btnCalculate.setOnClickListener(v -> {
             try {
                 double salary = 0;
 
                 if (rdPermanent.isChecked()) {
-                    salary = 7000 + 200 * Integer.parseInt(spinnerNumberOfChildren.getSelectedItem().toString());
+                    salary = 7000;
+
+                    if (cbMarried.isChecked())
+                        salary = 7000 + 200 * Integer.parseInt(spinnerNumberOfChildren.getSelectedItem().toString());
                 } else {
                     salary = 100 * Double.parseDouble(etNumberOfHours.getText().toString());
                 }
@@ -107,6 +129,8 @@ public class Ex02Activity extends AppCompatActivity {
                 tvSalary.setText(R.string.problem);
             }
         });
+
+        //endregion
     }
 
     private void enableOrDisableCLay(ConstraintLayout cLay, boolean state) {
