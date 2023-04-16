@@ -6,6 +6,123 @@
     android:layout_height="match_parent"
     tools:context=".Ex01Activity">
 
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintlayoutEx01Languages"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/btnEx01CheckAll"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <CheckBox
+            android:id="@+id/cbEx01C"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="C"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <CheckBox
+            android:id="@+id/cbEx01CPlusPlus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="C++"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cbEx01C" />
+
+        <CheckBox
+            android:id="@+id/cbEx01CSharp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="C#"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cbEx01CPlusPlus" />
+
+        <CheckBox
+            android:id="@+id/cbEx01VBDotNet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="VB.Net"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cbEx01CSharp" />
+
+        <CheckBox
+            android:id="@+id/cbEx01Java"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Java"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cbEx01VBDotNet" />
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/barrier2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="right"
+            app:constraint_referenced_ids="cbEx01Java,cbEx01C,cbEx01CSharp,cbEx01VBDotNet,cbEx01CPlusPlus" />
+
+        <CheckBox
+            android:id="@+id/cbEx01HTML"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="32dp"
+            android:text="HTML"
+            android:textSize="24sp"
+            app:layout_constraintStart_toEndOf="@id/barrier2"
+            app:layout_constraintTop_toTopOf="@+id/cbEx01C" />
+
+        <CheckBox
+            android:id="@+id/cbEx01CSS"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="32dp"
+            android:text="CSS"
+            android:textSize="24sp"
+            app:layout_constraintStart_toEndOf="@id/barrier2"
+            app:layout_constraintTop_toTopOf="@+id/cbEx01CPlusPlus" />
+
+        <CheckBox
+            android:id="@+id/cbEx01Javascript"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="32dp"
+            android:text="Javascript"
+            android:textSize="24sp"
+            app:layout_constraintStart_toEndOf="@id/barrier2"
+            app:layout_constraintTop_toTopOf="@+id/cbEx01CSharp" />
+
+        <CheckBox
+            android:id="@+id/cbEx01SQL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="32dp"
+            android:text="SQL"
+            android:textSize="24sp"
+            app:layout_constraintStart_toEndOf="@id/barrier2"
+            app:layout_constraintTop_toTopOf="@+id/cbEx01VBDotNet" />
+
+        <CheckBox
+            android:id="@+id/cbEx01PHP"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="32dp"
+            android:text="PHP"
+            android:textSize="24sp"
+            app:layout_constraintStart_toEndOf="@id/barrier2"
+            app:layout_constraintTop_toTopOf="@+id/cbEx01Java" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
     <Button
         android:id="@+id/btnEx01CheckAll"
         android:layout_width="0dp"
@@ -50,4 +167,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
