@@ -4,4 +4,50 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Ex01Activity"/>
+    tools:context=".Ex01Activity">
+
+    <Button
+        android:id="@+id/btnEx01CheckAll"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="Check all"
+        app:layout_constraintBottom_toTopOf="@+id/btnEx01Reverse"
+        app:layout_constraintEnd_toStartOf="@+id/btnEx01UncheckAll"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnEx01UncheckAll"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="Uncheck all"
+        app:layout_constraintBottom_toBottomOf="@+id/btnEx01CheckAll"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnEx01CheckAll"
+        app:layout_constraintTop_toTopOf="@+id/btnEx01CheckAll" />
+
+    <Button
+        android:id="@+id/btnEx01Reverse"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="Reverse"
+        app:layout_constraintBottom_toTopOf="@+id/btnEx01Display"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnEx01Display"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="Display checked languages"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
