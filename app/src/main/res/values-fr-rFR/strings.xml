@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">m213-ch07-tp01</string>
+    <string name="title">Calcul du salaire</string>
+    <string name="btn_calculate">Calculer</string>
+    <string name="permanent_trainer">Permanent</string>
+    <string name="temporary_trainer">Vacataire</string>
+    <string name="number_of_hours">Nombre d\'heures</string>
+    <string name="married">Marié(e)</string>
+    <string name="child_or_children">@string/child</string>
+    <string name="child">Enfant</string>
+    <string name="children">Enfants</string>
+</resources>

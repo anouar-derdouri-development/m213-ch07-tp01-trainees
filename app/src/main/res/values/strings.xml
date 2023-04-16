@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">m213-ch07-tp01</string>
+    <string name="title">Salary calculation</string>
+    <string name="btn_calculate">Calculate</string>
+    <string name="permanent_trainer">Permanent</string>
+    <string name="temporary_trainer">Temporary</string>
+    <string name="number_of_hours">Number of hours</string>
+    <string name="married">Married</string>
+    <string name="child_or_children">@string/child</string>
+    <string name="child">Child</string>
+    <string name="children">Children</string>
 </resources>
