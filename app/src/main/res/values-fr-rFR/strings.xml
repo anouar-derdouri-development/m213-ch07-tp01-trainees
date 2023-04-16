@@ -7,7 +7,7 @@
     <string name="temporary_trainer">Vacataire</string>
     <string name="number_of_hours">Nombre d\'heures</string>
     <string name="married">Marié(e)</string>
-    <string name="child_or_children">@string/child</string>
     <string name="child">Enfant</string>
     <string name="children">Enfants</string>
+    <string name="problem">Problème</string>
 </resources>

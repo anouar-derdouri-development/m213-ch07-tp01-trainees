@@ -33,7 +33,6 @@
             android:id="@+id/rdPermanent"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:checked="true"
             android:text="@string/permanent_trainer"
             android:textSize="20sp" />
 
@@ -46,20 +45,20 @@
 
             <TextView
                 android:id="@+id/tvMarried"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:text="@string/married"
                 android:textSize="20sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/spinnerNumberOfChildren"
                 app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintHorizontal_chainStyle="spread"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <Spinner
                 android:id="@+id/spinnerNumberOfChildren"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="48dp"
                 android:layout_marginLeft="16dp"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -72,8 +71,7 @@
                 android:id="@+id/tvChildOrChildren"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="8dp"
-                android:text="@string/child_or_children"
+                android:text="@string/child"
                 android:textSize="20sp"
                 app:layout_constraintBottom_toBottomOf="@+id/spinnerNumberOfChildren"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -120,6 +118,16 @@
                 app:layout_constraintStart_toEndOf="@+id/tvNumberOfHours"
                 app:layout_constraintTop_toTopOf="parent" />
         </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/tvSalary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/salary_color_blue_shade"
+            android:layout_marginTop="32dp"
+            android:gravity="center_horizontal"
+            android:textSize="30sp"
+            android:text="-" />
     </RadioGroup>
 
     <Button
